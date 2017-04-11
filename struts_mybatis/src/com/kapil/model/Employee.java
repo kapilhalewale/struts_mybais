@@ -1,4 +1,4 @@
-package model;
+package com.kapil.model;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -14,6 +14,7 @@ public class Employee implements Serializable
 	private BigDecimal salary;
 	private Date dateOfJoining;
 	private Entity entity;
+	
 	public int getId() {
 		return id;
 	}

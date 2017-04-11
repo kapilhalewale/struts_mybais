@@ -1,9 +1,9 @@
-package dao;
+package com.kapil.dao;
 
 import java.io.Serializable;
 import java.util.List;
 
-import model.Employee;
+import com.kapil.model.Employee;
 
 public interface EmployeeDao extends Serializable
 {

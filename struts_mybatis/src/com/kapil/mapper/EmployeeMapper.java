@@ -1,11 +1,7 @@
-package mapper;
+package com.kapil.mapper;
 
 import java.io.Serializable;
 import java.util.List;
-
-import model.Employee;
-import model.Entity;
-
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.One;
@@ -14,6 +10,9 @@ import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
+
+import com.kapil.model.Employee;
+import com.kapil.model.Entity;
 
 public interface EmployeeMapper extends Serializable
 {

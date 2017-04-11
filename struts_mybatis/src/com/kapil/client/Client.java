@@ -1,13 +1,14 @@
-package client;
+package com.kapil.client;
 
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
-import model.Employee;
-import model.Entity;
-import service.EmployeeService;
-import service.EmployeeServiceImpl;
+import com.kapil.model.Employee;
+import com.kapil.model.Entity;
+import com.kapil.service.EmployeeService;
+import com.kapil.service.EmployeeServiceImpl;
+
 
 public class Client {
 

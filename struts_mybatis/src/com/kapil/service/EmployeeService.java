@@ -1,9 +1,9 @@
-package service;
+package com.kapil.service;
 
 import java.io.Serializable;
 import java.util.List;
+import com.kapil.model.Employee;
 
-import model.Employee;
 
 public interface EmployeeService extends Serializable
 {

@@ -1,4 +1,4 @@
-package controller;
+package com.kapil.controller;
 
 import java.util.Map;
 import org.apache.struts2.interceptor.SessionAware;

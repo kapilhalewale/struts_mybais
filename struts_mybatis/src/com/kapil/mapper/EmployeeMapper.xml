@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kapil.dao.EmployeeDao">
+	<resultMap type="Entity" id="entity">
+		<id property="id" column="id"/>
+		<result property="name" column="name"/>
+	</resultMap>
+	<resultMap type="Employee" id="employee">
+		<id property="id" column="id"/>
+		<result property="name" column="name"/>
+		<result property="code" column="code"/>
+		<result property="salary" column="salary"/>
+		<result property="dateOfJoining" column="date_of_joining"/>
+		<association property="entity" resultMap="entity"/>
+	</resultMap>
+	
+	<insert id="saveEmployee" parameterType="Employee" keyProperty="id" useGeneratedKeys="true">
+		INSERT INTO employee(name,code, salary,date_of_joining,entity_id)
+		VALUES(#{name},#{code},#{salary},#{dateOfJoining},#{entity.id})
+	</insert>
+	<select id="getEmployee" resultMap="employee">
+		SELECT e.id AS employee_id, e.name AS employee_name, e.code AS employee_code, e.salary AS 
+		employee_salary, e.date_of_joining AS employee_date_of_joining,
+		en.id AS entity_id, en.name AS entity_name
+		FROM employee e
+		LEFT JOIN entity en ON en.id = e.entity_id 
+	</select>
+	<select id="getEmployees" resultMap="employee">
+		SELECT e.id AS employee_id, e.name AS employee_name, e.code AS employee_code, e.salary AS 
+		employee_salary, e.data_of_joining AS employee_date_of_joining,
+		en.id AS entity_id, en.name AS entity_name
+		FROM employee e
+		LEFT JOIN entity en ON en.id = e.entity_id 
+		WHERE e.id = #{id}
+	</select>
+	<update id="updateEmployee" parameterType="Employee">
+		UPDATE employee
+		SET name = #{name},
+			code = #{code},
+			salary = #{salary},
+			
+	</update>
+ </mapper>
+ 

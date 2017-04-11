@@ -1,10 +1,12 @@
-package dao;
+package com.kapil.dao;
 
 import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
-import util.GenericClass;
-import mapper.EmployeeMapper;
-import model.Employee;
+import com.kapil.mapper.EmployeeMapper;
+import com.kapil.model.Employee;
+import com.kapil.util.GenericClass;
+
 
 public class EmployeeDaoImpl extends GenericClass implements EmployeeDao
 {

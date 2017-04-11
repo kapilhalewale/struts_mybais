@@ -1,4 +1,4 @@
-package util;
+package com.kapil.util;
 
 import java.io.Reader;
 import org.apache.ibatis.session.SqlSessionFactory;

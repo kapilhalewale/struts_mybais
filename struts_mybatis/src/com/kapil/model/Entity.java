@@ -1,4 +1,4 @@
-package model;
+package com.kapil.model;
 
 import java.io.Serializable;
 
